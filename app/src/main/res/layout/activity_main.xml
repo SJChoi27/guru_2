@@ -6,30 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="136dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBackgroundView"
+        android:layout_width="368dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:src="@drawable/cloud" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/contextEditText"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:hint="내용을 입력하세요."
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <TextView
+        android:id="@+id/diaryContent"
+        android:layout_width="0dp"
+        android:layout_height="255dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="500dp"
+        android:text="수정하기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="10sp"
+        android:typeface="normal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toEndOf="@+id/deleteBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="500dp"
+        android:text="삭제하기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="10sp"
+        android:typeface="normal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="500dp"
+        android:text="저장하기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="10sp"
+        android:typeface="normal"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCalendarbutton" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/addCalendarbutton"
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+
+    <TextView
+        android:id="@+id/diaryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="281dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="26dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:text="back"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
