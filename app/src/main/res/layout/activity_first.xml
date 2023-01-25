@@ -31,6 +31,62 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/nameAddTextView"
+        android:layout_width="154dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="128dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="닉네임을 입력해주세요!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/makenewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="128dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="코드 번호가 없다면 새로운 그룹을 만드세요!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="114dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="128dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Welcome~!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F6A19C"
+        android:textSize="21sp"
+        android:typeface="normal"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -40,51 +96,92 @@
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="-80dp"
 
         android:layout_marginEnd="97dp"
         android:layout_marginBottom="204dp"
         android:ems="10"
-        android:hint="입력해주세요"
         android:inputType="textPersonName"
         android:textSize="15sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groupAddTextView"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/addButtonTextView2"
-        android:layout_width="39dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginEnd="186dp"
-        android:layout_marginBottom="163dp"
-        android:text="그룹 생성"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#03A9F4"
-        android:textSize="10sp"
-        android:textStyle="italic"
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-80dp"
+
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="204dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nextButton" />
+        app:layout_constraintTop_toBottomOf="@+id/groupAddTextView"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/checkButton2"
         android:layout_width="92dp"
         android:layout_height="50dp"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="8dp"
-        android:text="다음"
-        app:layout_constraintBottom_toTopOf="@+id/addButtonTextView2"
+        android:text="확인"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groupEditText"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintTop_toBottomOf="@+id/groupEditText" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="92dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="161dp"
+        android:text="확인"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupEditText" />
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:text="코드 입력"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makenewTextView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/makeButton"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="가족 생성"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/insertButton"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makenewTextView"
+        tools:ignore="TouchTargetSizeCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
